@@ -66,7 +66,6 @@ class Player extends Model {
     }
 }
 
-
 Player.init();
 Player.belongsTo(Team, {
     foreignKey: 'teamId',

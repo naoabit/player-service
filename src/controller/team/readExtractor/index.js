@@ -5,4 +5,4 @@ module.exports = (team, players) => ({
     coach: team.coach,
     year: team.year,
     players: players.map(playerExtractor),
-})
+});

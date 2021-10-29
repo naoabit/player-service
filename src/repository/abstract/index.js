@@ -10,7 +10,7 @@ class AbstractSequelizeRepository {
      * @param {object} modelData
      * @returns {Promise<object>}
      */
-        create(modelData) {
+    create(modelData) {
         return this.model.create(modelData);
     }
 
@@ -24,8 +24,6 @@ class AbstractSequelizeRepository {
         await this.model.update(data, { where: fields });
         return this.model.findOne({ where: fields });
     }
-    
-     
 
     /**
      * Find one entities by given fields
@@ -33,7 +31,7 @@ class AbstractSequelizeRepository {
      * @param {Array<String>} attributes - optional list of returned fields
      * @return {Promise} Entities
      */
-     findOneByFields(fields, attributes) {
+    findOneByFields(fields, attributes) {
         return this.model.findOne({
             attributes,
             where: fields,
@@ -47,7 +45,7 @@ class AbstractSequelizeRepository {
      * @param {Array<String>} attributes - optional list of returned fields
      * @return {Promise} Entities
      */
-        findByFields(fields, attributes) {
+    findByFields(fields, attributes) {
         return this.model.findAll({
             attributes,
             where: fields,

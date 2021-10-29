@@ -17,7 +17,7 @@ class Team {
     async read(req, res, next) {
         try {
             const { year } = req.params;
-            const team = await teamRepository.findOneByFields({ year: parseInt(year) });
+            const team = await teamRepository.findOneByFields({ year: parseInt(year, 10) });
 
             if (!team) {
                 throw new Error(`${NOT_FOUND}: The team does not exist`);
