@@ -7,8 +7,6 @@ const routers = require('./route');
 dotenv.config();
 
 const loadApp = async () => {
-    await require('./database/model/index.js');
-
     const app = express();
     app.use(cors());
     app.use(json());

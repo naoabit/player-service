@@ -1,0 +1,19 @@
+{
+    "user": {
+        "host": {
+            "ENV": "DB_HOST"
+        },
+        "user": {
+            "ENV": "DB_USER"
+        },
+        "password": {
+            "ENV": "DB_PWD"
+        },
+        "database": {
+            "ENV": "DB_NAME"
+        },
+        "driver": {
+            "ENV": "DB_DRIVER"
+        }
+    }
+}
