@@ -10,10 +10,22 @@ class AbstractSequelizeRepository {
      * @param {object} modelData
      * @returns {Promise<object>}
      */
-         create(modelData) {
-            return this.model.create(modelData);
-        }
+        create(modelData) {
+        return this.model.create(modelData);
+    }
+
+    /**
+     * Update an entity
+     * @param {Object} data to update
+     * @param {Object} fields to look for
+     * @returns {Promise} The created entity
+     */
+    async updateByFields(data, fields) {
+        await this.model.update(data, { where: fields });
+        return this.model.findOne({ where: fields });
+    }
     
+     
 
     /**
      * Find one entities by given fields
