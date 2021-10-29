@@ -7,6 +7,15 @@ class AbstractSequelizeRepository {
     }
 
     /**
+     * @param {object} modelData
+     * @returns {Promise<object>}
+     */
+         create(modelData) {
+            return this.model.create(modelData);
+        }
+    
+
+    /**
      * Find one entities by given fields
      * @param {Object} fields to look for
      * @param {Array<String>} attributes - optional list of returned fields

@@ -1,7 +1,8 @@
-import express from 'express';
+const express = require('express');
+const playerController = require('../../controller/player');
 
 const router = express.Router();
 
-router.get('/v1/players', () => {});
+router.post('/api/player/:year', playerController.create);
 
-export default router;
+module.exports = router;
